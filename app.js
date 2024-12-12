@@ -189,7 +189,7 @@ const updateCurrentWeather = (data) => {
 const updateForecastChart = (data) => {
   try {
     if (!elements.forecastChart || !elements.forecastChart.getContext) {
-      throw new Error("Forecast chart canvas not available");
+      throw new Error("Forecast chart not available");
     }
 
     const ctx = elements.forecastChart.getContext("2d");
@@ -346,7 +346,7 @@ const handleGetCurrentLocation = async () => {
       elements.locationName.textContent = locationName;
     } catch (geocodeError) {
       console.error("Error getting location name:", geocodeError);
-      elements.locationName.textContent = "Location Found"; // Fallback if geocoding fails
+      elements.locationName.textContent = "Location Found"; // Error if geocoding fails
     }
 
     await fetchAndDisplayWeather(latitude, longitude);
@@ -389,7 +389,7 @@ elements.getCurrentLocation?.addEventListener(
 );
 elements.searchLocation?.addEventListener("click", handleSearchLocation);
 
-// Optional: Add enter key listener for search
+// Add enter key listener for search
 elements.locationInput?.addEventListener("keypress", (event) => {
   if (event.key === "Enter") {
     handleSearchLocation();
