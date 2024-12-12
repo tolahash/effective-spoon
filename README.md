@@ -1,10 +1,9 @@
-# [Weather App](https://weather-invention.vercel.app/)
-
 # Weather Forecast App
 
 ## Overview
 The Weather Forecast App provides users with real-time weather information and a 7-day forecast. Users can search for a specific city or use their current location to access weather details such as temperature, humidity, wind speed, and more. The app also visualizes temperature trends in an interactive chart.
 
+## [Click here to check out the Weather App](https://weather-invention.vercel.app/)
 ---
 
 ## Features
